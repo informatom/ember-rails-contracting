@@ -1,0 +1,25 @@
+<h2> Vertrag </h2>
+
+<table class="table table-striped table-bordered table-hover table-condensed">
+  {{contract-thead}}
+  <tbody>
+    {{contract-tableline item=this}}
+  </tbody>
+
+  {{contractitem-thead}}
+  <tbody>
+    {{#each item in contractItems}}
+      {{contractitem-tableline item=item}}
+    {{/each}}
+  </tbody>
+  </thead>
+</table>
+
+<div class="btn-group">
+  {{#link-to 'contracts' class="btn btn-info btn-sm"}}
+    <span class="glyphicon glyphicon-zoom-out">
+  {{/link-to}}
+  {{#link-to 'contracts' class="btn btn-info btn-sm"}}
+  alle Verträge
+  {{/link-to}}
+</div>

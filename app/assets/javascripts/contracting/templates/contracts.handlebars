@@ -1,0 +1,10 @@
+<h2> Verträge </h2>
+
+<table class="table table-striped table-bordered table-hover table-condensed">
+  {{contract-thead}}
+  <tbody>
+    {{#each}}
+      {{contract-tableline item=this}}
+    {{/each}}
+  </tbody>
+</table>
