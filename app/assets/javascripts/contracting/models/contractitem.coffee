@@ -14,7 +14,7 @@ Contracting.ContractItem = DS.Model.extend(
   descriptionEn: DS.attr("string")
   amount: DS.attr("number")
   unit: DS.attr("string")
-  volumeBW: DS.attr("number")
+  volumeBw: DS.attr("number")
   volumeColor: DS.attr("number")
   marge: DS.attr("number")
   vat: DS.attr("number")
@@ -61,7 +61,7 @@ Contracting.ContractItem = DS.Model.extend(
   newRateWithMonitoring3: (->
     @get("newRate3") + parseFloat(@get("monitoringRate"))
   ).property("newRate3", "monitoringRate")
-  
+
   newRate4: (->
     @get("consumableItems").reduce (prevVal, item) ->
       (prevVal or 0) + item.get("newRate4")
@@ -125,14 +125,14 @@ Contracting.ContractItem = DS.Model.extend(
     else
       0
   ).property("newRate1", "balance1")
-  
+
   monthsWithoutRates2: (->
     if @get("balance2") < 0
       Math.floor(@get("balance2") / @get("newRate2")) * (-1)
     else
       0
   ).property("newRate2", "balance2")
-  
+
   monthsWithoutRates3: (->
     if @get("balance3") < 0
       Math.floor(@get("balance3") / @get("newRate3")) * (-1)
@@ -169,7 +169,7 @@ Contracting.ContractItem = DS.Model.extend(
   nextMonth4: (->
     ((@get("monthsWithoutRates4") * @get("newRate5")) + parseFloat(@get("balance4"))) * (-1)
   ).property("monthsWithoutRates4", "newRate5", "balance4")
-  
+
   nextMonth5: (->
     ((@get("monthsWithoutRates5") * @get("newRate6")) + parseFloat(@get("balance5"))) * (-1)
   ).property("monthsWithoutRates5", "newRate6", "balance5")

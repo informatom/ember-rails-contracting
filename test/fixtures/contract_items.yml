@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  position: 1
+  term: 1
+  startdate: 2014-06-18
+  product_number: MyString
+  description_de: MyString
+  description_en: MyString
+  amount: 1
+  unit: MyString
+  volume_bw: 1
+  volume_color: 1
+  marge: 1
+  vat: 1
+  discount_abs: 1
+  monitoring_rate: 1
+
+two:
+  position: 1
+  term: 1
+  startdate: 2014-06-18
+  product_number: MyString
+  description_de: MyString
+  description_en: MyString
+  amount: 1
+  unit: MyString
+  volume_bw: 1
+  volume_color: 1
+  marge: 1
+  vat: 1
+  discount_abs: 1
+  monitoring_rate: 1

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  term: 1
+  startdate: 2014-06-18
+
+two:
+  term: 1
+  startdate: 2014-06-18

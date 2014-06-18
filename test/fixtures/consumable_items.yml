@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contract_type: MyString
+  position: 1
+  product_number: MyString
+  product_line: MyString
+  description_de: MyString
+  description_en: MyString
+  amount: 1
+  yield: 1
+  wholesale_price: 1
+  term: 1
+  consumption1: 1
+  consumption2: 1
+  consumption3: 1
+  consumption4: 1
+  consumption5: 1
+  consumption6: 1
+  balance6: 1
+
+two:
+  contract_type: MyString
+  position: 1
+  product_number: MyString
+  product_line: MyString
+  description_de: MyString
+  description_en: MyString
+  amount: 1
+  yield: 1
+  wholesale_price: 1
+  term: 1
+  consumption1: 1
+  consumption2: 1
+  consumption3: 1
+  consumption4: 1
+  consumption5: 1
+  consumption6: 1
+  balance6: 1

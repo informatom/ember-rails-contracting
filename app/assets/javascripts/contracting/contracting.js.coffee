@@ -13,6 +13,5 @@
 #= require_tree ./helpers
 #= require_tree ./components
 #= require_tree ./templates
-#= require_tree ./fixtures
 
 window.Contracting = Ember.Application.create()

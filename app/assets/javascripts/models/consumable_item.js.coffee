@@ -1,0 +1,20 @@
+# for more details see: http://emberjs.com/guides/models/defining-models/
+
+Contracting.ConsumableItem = DS.Model.extend
+  contractType: DS.attr 'string'
+  position: DS.attr 'number'
+  productNumber: DS.attr 'string'
+  productLine: DS.attr 'string'
+  descriptionDe: DS.attr 'string'
+  descriptionEn: DS.attr 'string'
+  amount: DS.attr 'number'
+  yield: DS.attr 'number'
+  wholesalePrice: DS.attr 'number'
+  term: DS.attr 'number'
+  consumption1: DS.attr 'number'
+  consumption2: DS.attr 'number'
+  consumption3: DS.attr 'number'
+  consumption4: DS.attr 'number'
+  consumption5: DS.attr 'number'
+  consumption6: DS.attr 'number'
+  balance6: DS.attr 'number'

@@ -1,0 +1,2 @@
+class ConsumableItemsController < ApplicationController
+end
