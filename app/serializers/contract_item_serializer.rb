@@ -1,3 +1,10 @@
 class ContractItemSerializer < ActiveModel::Serializer
-  attributes :id, :position, :term, :startdate, :product_number, :description_de, :description_en, :amount, :unit, :volume_bw, :volume_color, :marge, :vat, :discount_abs, :monitoring_rate
+  embed :ids, include: true
+
+  attributes :id, :position, :term, :startdate, :product_number,
+             :description_de, :description_en, :amount, :unit, :volume_bw,
+             :volume_color, :marge, :vat, :discount_abs, :monitoring_rate
+
+  has_many :consumable_items
+  has_one :contract
 end
