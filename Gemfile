@@ -42,7 +42,7 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
+gem 'byebug', group: [:development, :test]
 
 gem "active_model_serializers"
 gem "ember-rails"
