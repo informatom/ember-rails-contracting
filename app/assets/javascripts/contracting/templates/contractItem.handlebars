@@ -12,7 +12,7 @@
   {{consumableitem-thead}}
   <tbody>
     {{#each item in consumableItems}}
-      {{consumableitem-tableline item=item}}
+      {{view Contracting.ConsumableItemView itemBinding="item"}}
     {{/each}}
   </tbody>
 </table>

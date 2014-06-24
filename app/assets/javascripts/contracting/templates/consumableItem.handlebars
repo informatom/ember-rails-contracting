@@ -1,4 +1,9 @@
-<td>{{item.position}}</td>
+<td>
+  {{item.position}}
+  <button class="btn btn-danger btn-xs" {{action "deleteConsumable" item}}>
+    <span class="glyphicon glyphicon-remove">
+  </button>
+</td>
 <td class="info" nowrap>{{input type="text" value=item.contractType}}</td>
 <td class="info" nowrap>{{input type="text" value=item.productNumber}}</td>
 <td class="info" nowrap>{{input type="text" value=item.productLine}}</td>
