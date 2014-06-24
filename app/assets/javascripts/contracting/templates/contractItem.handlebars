@@ -17,11 +17,10 @@
   </tbody>
 </table>
 
-<div class="btn-group">
-  {{#link-to 'contract' this.contract.id class="btn btn-info btn-sm"}}
-    <span class="glyphicon glyphicon-zoom-out">
-  {{/link-to}}
-  {{#link-to 'contract' this.contract.id class="btn btn-info btn-sm"}}
-    Vertrag {{this.contract.id}}
-  {{/link-to}}
-</div>
+<button class="btn btn-success btn-sm" {{action "create"}}>
+  <span class="glyphicon glyphicon-plus" /> Verbrauch anlegen
+</button>
+
+{{#link-to 'contract' this.contract.id class="btn btn-info btn-sm"}}
+  <span class="glyphicon glyphicon-zoom-out" /> Vertrag {{this.contract.id}}
+{{/link-to}}
