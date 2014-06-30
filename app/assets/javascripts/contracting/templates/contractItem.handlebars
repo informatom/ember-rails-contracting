@@ -11,7 +11,7 @@
   {{contractitem-calendarlines item=this}}
   {{consumableitem-thead}}
   <tbody>
-    {{#each item in consumableItems}}
+    {{#each item in cleanItems}}
       {{view Contracting.ConsumableItemView itemBinding="item"}}
     {{/each}}
   </tbody>
