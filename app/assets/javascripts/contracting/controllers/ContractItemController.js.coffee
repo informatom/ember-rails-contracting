@@ -12,8 +12,3 @@ Contracting.ContractItemController = Ember.ObjectController.extend
         contractItem: @get('model')
       consumableItem.save().then () ->
         controller.get('model').reload()
-
-  cleanItems: (->
-    @get("consumableItems").filter (item, index) ->
-      not (item.get("isDirty"))
-  ).property("consumableItems.@each")
