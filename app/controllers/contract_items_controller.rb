@@ -1,12 +1,11 @@
 class ContractItemsController < ApplicationController
+  respond_to :json
 
   def index
-    @contract_items = ContractItem.all
-    render json: @contract_items
+    respond_with ContractItem.all
   end
 
   def show
-    @contract_item = ContractItem.find(params[:id])
-    render json: @contract_item
+    respond_with ContractItem.find(params[:id])
   end
 end
