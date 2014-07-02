@@ -1,23 +1,19 @@
 class ConsumableItemsController < ApplicationController
+  respond_to :json
 
   def index
-    @consumable_items = ConsumableItem.all
-    render json: @consumable_items
+    respond_with ConsumableItem.all
   end
 
   def show
-    @consumable_item = ConsumableItem.find(params[:id])
-    render json: @consumable_item
+    respond_with ConsumableItem.find(params[:id])
   end
 
   def create
-    @consumable_item = ConsumableItem.new(params[:consumable_item]).save
-    render json: @consumable_item
+    respond_with ConsumableItem.create(params[:consumable_item])
   end
 
   def destroy
-    @consumable_item = ConsumableItem.find(params[:id])
-    @consumable_item.delete
-    render json: nil
+    respond_with ConsumableItem.find(params[:id]).delete
   end
 end
