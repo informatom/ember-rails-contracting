@@ -1,14 +1,11 @@
 Contracting.ContractItemController = Ember.ObjectController.extend
   actions:
-    deleteConsumable: (item) ->
-      consumableItem = item
-      consumableItem.deleteRecord()
-      consumableItem.save()
+    deleteConsumable: (consumableItem) ->
+      consumableItem.deleteRecord().save()
 
     create: ->
-      controller = this
       consumableItem = @store.createRecord 'consumableItem',
         position: 3
+        contractType: "test"
         contractItem: @get('model')
-      consumableItem.save().then () ->
-        controller.get('model').reload()
+      consumableItem.save()
