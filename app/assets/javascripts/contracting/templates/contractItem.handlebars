@@ -10,14 +10,10 @@
 <table class="table table-striped table-bordered table-hover table-condensed">
   {{contractitem-calendarlines item=this}}
   {{consumableitem-thead}}
-  <tbody>
-    {{#each item in consumableItems}}
-      {{view Contracting.ConsumableItemView itemBinding="item"}}
-    {{/each}}
-  </tbody>
+  {{outlet}}
 </table>
 
-<button class="btn btn-success btn-sm" {{action "create"}}>
+<button class="btn btn-success btn-sm" {{action "createConsumable"}}>
   <span class="glyphicon glyphicon-plus" /> Verbrauch anlegen
 </button>
 

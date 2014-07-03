@@ -1,5 +1,5 @@
 class ContractSerializer < ActiveModel::Serializer
-  embed :ids, include: true
+  embed :ids
 
   attributes :id, :term, :startdate
 

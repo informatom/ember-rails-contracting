@@ -1,10 +1,6 @@
 Contracting.ContractItemController = Ember.ObjectController.extend
   actions:
-    deleteConsumable: (consumableItem) ->
-      consumableItem.deleteRecord()
-      consumableItem.save()
-
-    create: ->
+    createConsumable: ->
       contractItem = @get('model')
       if isFinite(contractItem.get('maxposition'))
         position = contractItem.get('maxposition') + 10
@@ -13,4 +9,5 @@ Contracting.ContractItemController = Ember.ObjectController.extend
       consumableItem = @store.createRecord 'consumableItem',
         position: position
         contractItem: @get('model')
-      consumableItem.save()
+      consumableItem.save().then ->
+        contractItem.get('consumableItems').pushObject(consumableItem)
