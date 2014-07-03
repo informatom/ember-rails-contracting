@@ -173,4 +173,7 @@ Contracting.ContractItem = DS.Model.extend(
   nextMonth5: (->
     ((@get("monthsWithoutRates5") * @get("newRate6")) + parseFloat(@get("balance5"))) * (-1)
   ).property("monthsWithoutRates5", "newRate6", "balance5")
+
+  positions: Ember.computed.mapBy('consumableItems', 'position'),
+  maxposition: Ember.computed.max('positions')
 )
