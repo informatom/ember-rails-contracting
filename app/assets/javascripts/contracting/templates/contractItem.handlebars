@@ -10,7 +10,7 @@
 <table class="table table-striped table-bordered table-hover table-condensed">
   {{contractitem-calendarlines item=this}}
   {{consumableitem-thead}}
-  {{outlet}}
+  {{render "consumableItems" this.consumableItems}}
 </table>
 
 <button class="btn btn-success btn-sm" {{action "createConsumable"}}>
