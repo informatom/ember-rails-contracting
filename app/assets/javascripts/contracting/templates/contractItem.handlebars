@@ -1,22 +1,61 @@
-<h2> Vertragsposition </h2>
+<h3> Position {{position}}</h4>
 
-<table class="table table-striped table-bordered table-hover table-condensed">
-  {{contractitem-thead}}
-  <tbody>
-    {{contractitem-tableline item=this}}
-  </tbody>
-</table>
+<form class="form-horizontal row" role="form">
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Laufzeit (Monate)</label>
+    <div class="col-sm-6">{{input type="text" value=term size=1}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Vertragsbeginn</label>
+    <div class="col-sm-6">{{view Contracting.DatePickerField value=startdate}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Artikelnummer</label>
+    <div class="col-sm-6">{{input type="text" value=productNumber}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Beschreibung</label>
+    <div class="col-sm-6">{{input type="text" value=descriptionDe}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Beschreibung (EN)</label>
+    <div class="col-sm-6">{{input type="text" value=descriptionEn}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Menge / Einheit</label>
+    <div class="col-sm-6">{{input type="text" value=amount size=3}} {{input type="text" value=unit size=3}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Marge (%)</label>
+    <div class="col-sm-6">{{input type="text" value=marge size=1}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Monitoring (EUR)</label>
+    <div class="col-sm-6">{{input type="text" value=monitoringRate size=1}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Druckvolumen S/W (Seiten)</label>
+    <div class="col-sm-6">{{input type="text" value=volumeBw size=4}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Druckvolumen Farbe (Seiten)</label>
+    <div class="col-sm-6">{{input type="text" value=volumeColor size=4}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Rabatt absolut (EUR)</label>
+    <div class="col-sm-6">{{input type="text" value=discountAbs size=3}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Mehrwertsteuer</label>
+    <div class="col-sm-6">{{input type="text" value=vat size=1}}%</div>
+  </div>
+</form>
 
 <table class="table table-striped table-bordered table-hover table-condensed">
   {{contractitem-calendarlines item=this}}
-  {{consumableitem-thead}}
-  {{render "consumableItems" this.consumableItems}}
+  {{outlet}}
 </table>
 
 <button class="btn btn-success btn-sm" {{action "createConsumable"}}>
   <span class="glyphicon glyphicon-plus" /> Verbrauch anlegen
 </button>
-
-{{#link-to 'contract' this.contract.id class="btn btn-info btn-sm"}}
-  <span class="glyphicon glyphicon-zoom-out" /> Vertrag {{this.contract.id}}
-{{/link-to}}

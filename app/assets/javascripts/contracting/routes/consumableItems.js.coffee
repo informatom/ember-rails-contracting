@@ -1,3 +1,3 @@
 Contracting.ConsumableItemsRoute = Ember.Route.extend
-  model: ->
-    @store.find 'consumableItem'
+  model: (params) ->
+    @modelFor('contractItem').get 'consumableItems'

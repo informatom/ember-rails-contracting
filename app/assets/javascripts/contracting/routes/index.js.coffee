@@ -1,3 +1,3 @@
 Contracting.IndexRoute = Ember.Route.extend
-  beforeModel: ->
+  beforeModel: (params) ->
     @transitionTo "contracts"

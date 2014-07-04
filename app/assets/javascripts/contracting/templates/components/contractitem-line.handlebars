@@ -3,22 +3,22 @@
     <span class="glyphicon glyphicon-zoom-in">{{item.position}}
   {{/link-to}}
 </td>
-<td>{{input type="text" value=item.term size=1}}</td>
-<td>{{view Contracting.DatePickerField value=item.startdate}}</td>
+<td>{{item.term}}</td>
+<td>{{formatDate item.startdate}}</td>
 <td>{{formatDate item.enddate}}</td>
-<td>{{input type="text" value=item.productNumber}}</td>
-<td>{{input type="text" value=item.descriptionDe}}</td>
-<td>{{input type="text" value=item.descriptionEn}}</td>
-<td>{{input type="text" value=item.amount size=3}} {{input type="text" value=item.unit size=3}}</td>
-<td>{{input type="text" value=item.marge size=1}}</td>
-<td>{{input type="text" value=item.volumeBw size=4}}</td>
-<td>{{input type="text" value=item.volumeColor  size=4}}</td>
+<td>{{item.productNumber}}</td>
+<td>{{item.descriptionDe}}</td>
+<td>{{item.descriptionEn}}</td>
+<td>{{item.amount}} {{item.unit}}</td>
+<td>{{item.marge}}</td>
+<td>{{item.volumeBw}}</td>
+<td>{{item.volumeColor}}</td>
 <td>{{twoDigits item.price}}</td>
 <td>{{twoDigits item.monthlyRate}}</td>
-<td>{{input type="text" value=item.monitoringRate size=1}}</td>
-<td>{{input type="text" value=item.discountAbs size=3}}</td>
+<td>{{item.monitoringRate}}</td>
+<td>{{item.discountAbs}}</td>
 <td>{{twoDigits item.value}}</td>
-<td>{{input type="text" value=item.vat size=1}}%</td>
+<td>{{item.vat}}%</td>
 <td>{{twoDigits item.valueInclVat}}</td>
-<td>{{formatDatetime item.createdAt}}</td>
-<td>{{formatDatetime item.updatedAt}}</td>
+<td nowrap>{{formatDatetime item.createdAt}}</td>
+<td nowrap>{{formatDatetime item.updatedAt}}</td>

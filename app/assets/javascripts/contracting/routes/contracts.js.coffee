@@ -1,3 +1,3 @@
 Contracting.ContractsRoute = Ember.Route.extend
-  model: ->
+  model: (params) ->
     @store.find "contract"
