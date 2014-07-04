@@ -5,7 +5,7 @@ gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'therubyracer', platforms: :ruby
+# gem 'therubyracer'
 gem 'jquery-rails'
 gem "protected_attributes"
 
@@ -18,3 +18,5 @@ gem 'byebug', group: [:development, :test]
 gem "active_model_serializers"
 gem "ember-rails"
 gem "ember-source"
+
+gem "puma"
