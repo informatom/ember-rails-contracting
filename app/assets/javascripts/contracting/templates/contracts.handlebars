@@ -1,10 +1,21 @@
 <h2> Verträge </h2>
 
 <table class="table table-striped table-bordered table-hover table-condensed">
-  {{contract-thead}}
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Laufzeit (Monate)</th>
+      <th>Vertragsbeginn</th>
+      <th>Vertragsende</th>
+      <th>Vertrag angelegt</th>
+      <th>Vertrag zuletzt aktualisiert</th>
+    </tr>
+  </head>
   <tbody>
-    {{#each}}
-      {{contract-tableline item=this}}
+    {{#each contract in controller}}
+      {{contract-line item=contract}}
     {{/each}}
   </tbody>
 </table>
+
+{{outlet}}
