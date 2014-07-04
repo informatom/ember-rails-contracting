@@ -1,35 +1,64 @@
-<td>
-  {{item.position}}
-  <button class="btn btn-danger btn-xs" {{action "delete"}}>
-    <span class="glyphicon glyphicon-remove">
-  </button>
-</td>
-<td class="info" nowrap>{{input type="text" value=item.contractType}}</td>
-<td class="info" nowrap>{{input type="text" value=item.productNumber}}</td>
-<td class="info" nowrap>{{input type="text" value=item.productLine}}</td>
-<td class="info" nowrap>{{input type="text" value=item.descriptionDe}}</td>
-<td class="info" nowrap>{{input type="text" value=item.descriptionEn}}</td>
-<td class="warning" nowrap>{{input type="text" value=item.amount size=1}}</td>
-<td class="info" nowrap>{{input type="text" value=item.yield size=5}}</td>
-<td class="warning" nowrap>{{input type="text" value=item.wholesalePrice size=10}}</td>
-<td class="warning" nowrap>{{twoDigits item.price}}</td>
-<td class="warning" nowrap>{{twoDigits item.value}}</td>
-<td class="warning" nowrap>{{twoDigits item.monthlyRate}}</td>
-<td class="warning" nowrap>{{input type="text" value=item.term size=2}}</td>
-<td class="warning" nowrap>{{input type="text" value=item.consumption1 size=1}}</td>
-<td class="warning" nowrap>{{input type="text" value=item.consumption2 size=1}}</td>
-<td class="warning" nowrap>{{input type="text" value=item.consumption3 size=1}}</td>
-<td class="warning" nowrap>{{input type="text" value=item.consumption4 size=1}}</td>
-<td class="warning" nowrap>{{input type="text" value=item.consumption5 size=1}}</td>
-<td class="warning" nowrap>{{input type="text" value=item.consumption6 size=1}}</td>
-<td class="success" nowrap>{{twoDigits item.newRate2}}</td>
-<td class="success" nowrap>{{twoDigits item.newRate3}}</td>
-<td class="success" nowrap>{{twoDigits item.newRate4}}</td>
-<td class="success" nowrap>{{twoDigits item.newRate5}}</td>
-<td class="success" nowrap>{{twoDigits item.newRate6}}</td>
-<td class="warning" nowrap>{{twoDigits item.balance1}}</td>
-<td class="warning" nowrap>{{twoDigits item.balance2}}</td>
-<td class="warning" nowrap>{{twoDigits item.balance3}}</td>
-<td class="warning" nowrap>{{twoDigits item.balance4}}</td>
-<td class="warning" nowrap>{{twoDigits item.balance5}}</td>
-<td class="warning" nowrap>{{twoDigits item.balance6}}</td>
+<h3>Verbrauch {{position}}</h4>
+
+<form class="form-horizontal row" role="form">
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Vertragsart</label>
+    <div class="col-sm-6">{{input type="text" value=contractType}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Artikelnummer</label>
+    <div class="col-sm-6">{{input type="text" value=productNumber}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Produktlinie</label>
+    <div class="col-sm-6">{{input type="text" value=productLine}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Beschreibung</label>
+    <div class="col-sm-6">{{input type="text" value=descriptionDe}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Beschreibung (EN)</label>
+    <div class="col-sm-6">{{input type="text" value=descriptionEn}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Menge Gesamt (Stk.)</label>
+    <div class="col-sm-6">{{input type="text" value=amount size=1}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Reichweite (Seiten)</label>
+    <div class="col-sm-6">{{input type="text" value=yield size=5}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">HEK (EUR)</label>
+    <div class="col-sm-6">{{input type="text" value=wholesalePrice size=10}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Laufzeit (Monate)</label>
+    <div class="col-sm-6">{{input type="text" value=term size=2}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Verbrauch 1</label>
+    <div class="col-sm-6">{{input type="text" value=consumption1 size=1}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Verbrauch 2</label>
+    <div class="col-sm-6">{{input type="text" value=consumption2 size=1}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Verbrauch 3</label>
+    <div class="col-sm-6">{{input type="text" value=consumption3 size=1}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Verbrauch 4</label>
+    <div class="col-sm-6">{{input type="text" value=consumption4 size=1}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Verbrauch 5</label>
+    <div class="col-sm-6">{{input type="text" value=consumption5 size=1}}</div>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label class="col-sm-6 control-label">Verbrauch 6</label>
+    <div class="col-sm-6">{{input type="text" value=consumption6 size=1}}</div>
+  </div>
+</form>

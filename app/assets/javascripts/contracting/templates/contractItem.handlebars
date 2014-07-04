@@ -53,9 +53,10 @@
 
 <table class="table table-striped table-bordered table-hover table-condensed">
   {{contractitem-calendarlines item=this}}
-  {{outlet}}
 </table>
 
 <button class="btn btn-success btn-sm" {{action "createConsumable"}}>
   <span class="glyphicon glyphicon-plus" /> Verbrauch anlegen
 </button>
+
+{{outlet}}

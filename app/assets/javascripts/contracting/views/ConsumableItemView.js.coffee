@@ -1,3 +1,3 @@
 Contracting.ConsumableItemView = Ember.View.extend
   templateName: 'consumableItem'
-  tagName: 'tr'
+  tagName: 'td'
