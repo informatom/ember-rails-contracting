@@ -12,3 +12,6 @@ Contracting.Contract = DS.Model.extend
     moment(@get("startdate")).add("months", @get("term"))
                              .subtract "days", 1
   ).property("startdate", "term")
+
+  positions: Ember.computed.mapBy('contractItems', 'position'),
+  maxposition: Ember.computed.max('positions')

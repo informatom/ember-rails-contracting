@@ -6,8 +6,10 @@ Contracting.ContractController = Ember.ObjectController.extend
         position = contract.get('maxposition') + 10
       else
         position = 10
+
       contractItem = @store.createRecord 'contractItem',
         position: position
         contract: @get('model')
-      contractItem.save().then ->
-        contract.get('contractItems').pushObject(contractitem)
+
+      contractItem.save().then (contractItem)->
+        contract.get('contractItems').pushObject(contractItem)

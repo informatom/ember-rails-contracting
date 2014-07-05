@@ -1,5 +1,11 @@
 <h3> Position {{position}}</h4>
 
+<p>
+  <button class="btn btn-danger btn-sm" {{action "delete"}}>
+    <span class="glyphicon glyphicon-remove" /> Löschen
+  </button>
+</p>
+
 <form class="form-horizontal row" role="form">
   <div class="col-sm-3 form-group">
     <label class="col-sm-6 control-label">Laufzeit (Monate)</label>
@@ -55,8 +61,6 @@
   {{contractitem-calendarlines item=this}}
 </table>
 
-<button class="btn btn-success btn-sm" {{action "createConsumable"}}>
-  <span class="glyphicon glyphicon-plus" /> Verbrauch anlegen
-</button>
+{{render 'consumableItems' consumableItems}}
 
 {{outlet}}

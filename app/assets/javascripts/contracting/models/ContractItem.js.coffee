@@ -1,4 +1,4 @@
-Contracting.ContractItem = DS.Model.extend(
+Contracting.ContractItem = DS.Model.extend
   contract: DS.belongsTo("contract",
     async: true
   )
@@ -176,4 +176,3 @@ Contracting.ContractItem = DS.Model.extend(
 
   positions: Ember.computed.mapBy('consumableItems', 'position'),
   maxposition: Ember.computed.max('positions')
-)

@@ -1,3 +1,3 @@
-Contracting.ContractController = Ember.ObjectController.extend
+Contracting.ContractsController = Ember.ArrayController.extend
   sortProperties: ['updatedAt'],
   sortAscending: true

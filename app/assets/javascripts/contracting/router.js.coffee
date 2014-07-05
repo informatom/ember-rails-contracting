@@ -4,12 +4,8 @@ Contracting.Router.map ->
     path: "/", ->
       @resource "contract",
         path: "/contract/:contract_id", ->
-          @resource "contractItems",
-            path: "/items", ->
-              @resource "contractItem",
-                path: "/item/:contractItem_id", ->
-                  @resource "consumableItems",
-                    path: "/consumableitems", ->
-                      @resource "consumableItem",
-                        path: "/consumableitem/:consumableItem_id"
+          @resource "contractItem",
+            path: "/item/:contractItem_id", ->
+              @resource "consumableItem",
+                path: "/consumable/:consumableItem_id"
   return
