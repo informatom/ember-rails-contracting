@@ -7,7 +7,9 @@ Contracting.ContractItemController = Ember.ObjectController.extend({
       contractItem.get('consumableItems').forEach(function(consumableItem) {
         consumableItem.destroyRecord();
       });
-      contract.get('contractItems').removeObject(contractItem);
+      contract.then(function(contract) {
+        contract.get('contractItems').removeObject(contractItem);
+      });
       contractItem.destroyRecord();
       this.transitionToRoute('contract', contract);
     },
