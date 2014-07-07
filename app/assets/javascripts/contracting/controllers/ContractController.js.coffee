@@ -11,6 +11,7 @@ Contracting.ContractController = Ember.ObjectController.extend
       contractItem = @store.createRecord("contractItem",
         position: position
         contract: @get("model")
+        startdate: moment().toDate()
       )
 
       contractItem.save().then (contractItem) ->

@@ -9,8 +9,7 @@ Contracting.DatePickerField = Em.View.extend
     self = this
 
     onChangeDate = (ev) ->
-      self.set "value", ev.date
-      Ember.Logger.info(ev.date)
+      self.set "value", moment(ev.date).add('hours', 2).toDate()
 
     @$(".datepicker").datepicker
       separator: "."

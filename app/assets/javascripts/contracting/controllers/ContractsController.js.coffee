@@ -1,8 +1,10 @@
 Contracting.ContractsController = Ember.ArrayController.extend
-  sortProperties: ['updatedAt'],
+  sortProperties: ['id'],
   sortAscending: true,
 
   actions:
     create: ->
-      contract = @store.createRecord("contract")
+      contract = @store.createRecord("contract",
+        startdate: moment().toDate()
+      )
       contract.save()
