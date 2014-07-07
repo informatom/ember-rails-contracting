@@ -13,6 +13,10 @@ class ConsumableItemsController < ApplicationController
     respond_with ConsumableItem.create(params[:consumable_item])
   end
 
+  def update
+    respond_with ConsumableItem.find(params[:id]).update_attributes(params[:consumable_item])
+  end
+
   def destroy
     respond_with ConsumableItem.find(params[:id]).delete
   end

@@ -1,2 +1,3 @@
 Contracting.ContractitemLineComponent = Ember.Component.extend
-  tagName: 'tr'
+  tagName: 'tr',
+  classNameBindings: ['item.isDirty:warning']

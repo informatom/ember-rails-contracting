@@ -31,6 +31,11 @@ Contracting.ContractItemController = Ember.ObjectController.extend({
       consumableItem.save().then(function(consumableItem) {
         contractItem.get('consumableItems').pushObject(consumableItem);
       });
+    },
+
+    save: function() {
+      var contractItem = this.get('model');
+      contractItem.save();
     }
   }
 });

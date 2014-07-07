@@ -4,6 +4,13 @@
   <button class="btn btn-danger btn-sm" {{action "delete"}}>
     <span class="glyphicon glyphicon-remove" /> Löschen
   </button>
+
+  {{#if isDirty}}
+    <button class="btn btn-success btn-sm" {{action "save"}}>
+      <span class="glyphicon glyphicon-save" /> Speichern
+    </button>
+  {{/if}}
+
 </p>
 
 <form class="form-horizontal row" role="form">

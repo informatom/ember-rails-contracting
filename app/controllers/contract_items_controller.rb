@@ -13,6 +13,10 @@ class ContractItemsController < ApplicationController
     respond_with ContractItem.create(params[:contract_item])
   end
 
+  def update
+    respond_with ContractItem.find(params[:id]).update_attributes(params[:contract_item])
+  end
+
   def destroy
     respond_with ContractItem.find(params[:id]).delete
   end
