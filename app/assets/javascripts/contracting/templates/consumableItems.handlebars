@@ -2,9 +2,6 @@
   <thead>
     <tr>
       <th colspan=13>
-        <button class="btn btn-success btn-sm" {{action "createConsumable"}}>
-          <span class="glyphicon glyphicon-plus" /> Verbrauch anlegen
-        </button>
       </th>
       <th colspan=6>Verbrauch Jahr (Stk.)</th>
       <th colspan=5>Neuberechnung Jahr (EUR)</th>
@@ -49,3 +46,9 @@
     {{/each}}
   </tbody>
 </table>
+
+<br/>
+<button class="btn btn-success" {{action "createConsumable"}}>
+  <span class="glyphicon glyphicon-plus" /> neuer Verbrauch
+</button>
+<br/>&nbsp;
