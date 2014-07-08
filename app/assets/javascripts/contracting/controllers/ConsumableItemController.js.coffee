@@ -10,5 +10,13 @@ Contracting.ConsumableItemController = Ember.ObjectController.extend
       @transitionToRoute "contractItem", contractItem
 
     save: ->
+      @wantstodelete = true
       consumableItem = @get("model")
       consumableItem.save()
+      return
+
+    wantstodelete: false
+
+    toggle: (attribute) ->
+      @toggleProperty attribute
+      return
