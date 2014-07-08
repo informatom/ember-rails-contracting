@@ -20,5 +20,9 @@ module Contracting
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.railties_order = [:main_app, :all, Ember::Rails::Engine]
+
+    config.ember.app_name = "Contracting"
+    config.handlebars.templates_root = "contracting/templates"
+    config.handlebars.precompile = true
   end
 end

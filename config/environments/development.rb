@@ -28,7 +28,4 @@ Contracting::Application.configure do
   config.assets.debug = true
 
   config.ember.variant = :development
-  config.ember.app_name = "Contracting"
-  config.handlebars.templates_root = "contracting/templates"
-  config.handlebars.precompile = true
 end
